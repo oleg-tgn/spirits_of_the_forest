@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Stage, Layer, Star, Text } from 'react-konva';
 
 function generateShapes() {
