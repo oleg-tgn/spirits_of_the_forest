@@ -14,6 +14,12 @@ const hexToScreen = (q, r) => {
   return { x, y };
 };
 
+const richnessColor = {
+  "POOR": "rgb(190, 180, 170)",//серо-коричневый
+  "OK": "rgb(140, 116,69)",//светло коричневые
+  "LUSH": "rgb(70, 45, 25)" //темно-кориченевый чернозем
+}
+
 const Game = () => {
   const [hexagons, setHexagons] = useState([]);
   const hexagonSize = hexagonRadius; // Половина высоты гексагона
@@ -27,7 +33,7 @@ const Game = () => {
         ...hexData,
         x: centerX + x,
         y: centerY + y,
-        color: `#89b717`, // Пример цвета, можете изменить на основе богатства
+        color: richnessColor[hexData.richness],
       };
     });
     setHexagons(newHexagons);
