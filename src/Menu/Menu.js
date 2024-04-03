@@ -12,7 +12,6 @@ const Menu = () => {
           <li><Link to="/profile">Profile</Link></li>
           <li><Link to="/settings">Settings</Link></li>
           <li><Link to="/about">About</Link></li>
-          {/* Предполагается, что другие ссылки также будут ведеть на соответствующие страницы */}
         </ul>
       </nav>
     </div>

@@ -1,77 +1,56 @@
-import React from 'react';
-import { Stage, Layer, Star, Text } from 'react-konva';
+import React, { useState, useEffect } from 'react';
+import { Stage, Layer, RegularPolygon, Text } from 'react-konva';
+import hexagonsData from './hexagonsData';
 
-function generateShapes() {
-  return [...Array(10)].map((_, i) => ({
-    id: i.toString(),
-    x: Math.random() * window.innerWidth,
-    y: Math.random() * window.innerHeight,
-    rotation: Math.random() * 180,
-    isDragging: false,
-  }));
-}
+// Вычисляем высоту гексагона как 1/8 от высоты окна браузера
+const hexagonHeight = window.innerHeight / 8;
+const hexagonRadius = hexagonHeight / 2;
+const sqrt3 = Math.sqrt(3); // Корень из 3 для упрощения расчетов
 
-const INITIAL_STATE = generateShapes();
+// Функция для преобразования координат гексагона в координаты экрана
+const hexToScreen = (q, r) => {
+  const x = hexagonRadius * (sqrt3 * q + sqrt3 / 2 * r);
+  const y = hexagonRadius * 3 / 2 * r;
+  return { x, y };
+};
 
 const Game = () => {
-  const [stars, setStars] = React.useState(INITIAL_STATE);
+  const [hexagons, setHexagons] = useState([]);
+  const hexagonSize = hexagonRadius; // Половина высоты гексагона
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
 
-  const handleDragStart = (e) => {
-    const id = e.target.id();
-    setStars(
-      stars.map((star) => {
-        return {
-          ...star,
-          isDragging: star.id === id,
-        };
-      })
-    );
-  };
-  const handleDragEnd = (e) => {
-    setStars(
-      stars.map((star) => {
-        return {
-          ...star,
-          isDragging: false,
-        };
-      })
-    );
-  };
+  useEffect(() => {
+    const newHexagons = hexagonsData.map((hexData, index) => {
+      const { x, y } = hexToScreen(hexData.coord.x, hexData.coord.z);
+      return {
+        ...hexData,
+        x: centerX + x,
+        y: centerY + y,
+        color: `#89b717`, // Пример цвета, можете изменить на основе богатства
+      };
+    });
+    setHexagons(newHexagons);
+  }, []); // Пустой массив зависимостей означает, что эффект запустится один раз при монтировании
 
   return (
-    <>
-        <div>
-            <Stage width={window.innerWidth} height={window.innerHeight}>
-                <Layer>
-                    <Text text="Try to drag a star" />
-                    {stars.map((star) => (
-                    <Star
-                        key={star.id}
-                        id={star.id}
-                        x={star.x}
-                        y={star.y}
-                        numPoints={5}
-                        innerRadius={20}
-                        outerRadius={40}
-                        fill="#89b717"
-                        opacity={0.8}
-                        draggable
-                        rotation={star.rotation}
-                        shadowColor="black"
-                        shadowBlur={10}
-                        shadowOpacity={0.6}
-                        shadowOffsetX={star.isDragging ? 10 : 5}
-                        shadowOffsetY={star.isDragging ? 10 : 5}
-                        scaleX={star.isDragging ? 1.2 : 1}
-                        scaleY={star.isDragging ? 1.2 : 1}
-                        onDragStart={handleDragStart}
-                        onDragEnd={handleDragEnd}
-                    />
-                    ))}
-                </Layer>
-            </Stage>
-        </div>
-    </>
+    <Stage width={window.innerWidth} height={window.innerHeight}>
+      <Layer>
+        {hexagons.map((hexagon, index) => (
+          <RegularPolygon
+            key={index}
+            x={hexagon.x}
+            y={hexagon.y}
+            sides={6}
+            radius={hexagonSize}
+            fill={hexagon.color}
+            stroke="black"
+            strokeWidth={4}
+            // Добавьте сюда обработчики событий, если необходимо
+          />
+        ))}
+      </Layer>
+    </Stage>
   );
 };
 
