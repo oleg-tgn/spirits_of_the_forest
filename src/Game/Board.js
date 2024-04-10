@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layer, RegularPolygon } from 'react-konva';
+import Tree from './Tree'; // Импорт Tree
 
 const hexagonHeight = window.innerHeight / 8;
 const hexagonRadius = hexagonHeight / 2;
@@ -13,35 +14,37 @@ const hexToScreen = (q, r) => {
 };
 
 const Board = ({ hexagonsData, centerX, centerY }) => {
-  const hexagonSize = hexagonRadius; // Половина высоты гексагона
+    const hexagonSize = window.innerHeight / 16;
 
-  const hexagons = hexagonsData.map((hexData, index) => {
-    const { x, y } = hexToScreen(hexData.coord.x, hexData.coord.z);
-    return {
-      ...hexData,
-      x: centerX + x,
-      y: centerY + y,
-      color: hexData.color,
-    };
-  });
+    return (
+        <Layer>
+            {hexagonsData.map((hexData, index) => {
+                const { x, y } = hexToScreen(hexData.coord.x, hexData.coord.z);
+                const posX = centerX + x;
+                const posY = centerY + y;
 
-  return (
-    <Layer>
-      {hexagons.map((hexagon, index) => (
-        <RegularPolygon
-          key={index}
-          x={hexagon.x}
-          y={hexagon.y}
-          sides={6}
-          radius={hexagonSize}
-          fill={hexagon.color}
-          stroke="black"
-          strokeWidth={4}
-          // Добавьте сюда обработчики событий, если необходимо
-        />
-      ))}
-    </Layer>
-  );
+                return (
+                    <React.Fragment key={index}>
+                        <RegularPolygon
+                            x={posX}
+                            y={posY}
+                            sides={6}
+                            radius={hexagonSize}
+                            fill={hexData.color}
+                            stroke="black"
+                            strokeWidth={4}
+                        />
+                        <Tree
+                            tree={hexData.tree}
+                            x={posX}
+                            y={posY}
+                            hexagonHeight={hexagonHeight}
+                        />
+                    </React.Fragment>
+                );
+            })}
+        </Layer>
+    );
 };
 
 export default Board;
