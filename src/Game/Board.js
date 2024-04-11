@@ -1,10 +1,10 @@
 import React from 'react';
 import { Layer, RegularPolygon } from 'react-konva';
-import Tree from './Tree'; // Импорт Tree
+import Tree from './Tree';
 
 const hexagonHeight = window.innerHeight / 8;
 const hexagonRadius = hexagonHeight / 2;
-const sqrt3 = Math.sqrt(3); // Корень из 3 для упрощения расчетов
+const sqrt3 = Math.sqrt(3); 
 
 // Функция для преобразования координат гексагона в координаты экрана
 const hexToScreen = (q, r) => {

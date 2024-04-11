@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Image } from 'react-konva';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Image, Group } from 'react-konva';
 import useImage from 'use-image';
-import tree1Image from '../images/tree1.png'; // Обновите пути в соответствии со структурой вашего проекта
+import tree1Image from '../images/tree1.png';
 import tree2Image from '../images/tree2.png';
 
-const TreeImage = ({ imageSrc, x, y, height }) => {
+const TreeImage = ({ imageSrc, x, y, height, onClick }) => {
     const [image] = useImage(imageSrc);
     const [imgHeight, setImgHeight] = useState(height);
     const [imgWidth, setImgWidth] = useState(0);
 
     useEffect(() => {
         if (image) {
-            // Подгоняем ширину изображения, сохраняя его пропорции
             const ratio = image.width / image.height;
             setImgWidth(imgHeight * ratio);
         }
@@ -24,29 +23,45 @@ const TreeImage = ({ imageSrc, x, y, height }) => {
             y={y}
             width={imgWidth}
             height={imgHeight}
+            onClick={onClick} // Добавляем обработчик клика здесь
         />
     );
 };
 
-const Tree = ({ tree, x, y, hexagonHeight }) => {
-    if (!tree || tree.size === 0) {
+const Tree = ({ tree = { size: 0, player: null }, x, y, hexagonHeight }) => {
+    const [treeSize, setTreeSize] = useState(tree.size);
+    const treeHeight = useMemo(() => hexagonHeight * 0.25 * treeSize, [hexagonHeight, treeSize]);
+
+    if (!tree || treeSize === 0) {
         return null;
     }
 
-    const treeWidth = hexagonHeight * 0.4;
-    const treeHeight = hexagonHeight * 0.25 * tree.size;
-    const imageSrc = tree.player === 'player1' ? tree1Image : tree2Image; // Используйте импортированные изображения
-
+    const imageSrc = tree.player === 'player1' ? tree1Image : tree2Image;
     const bottomOfHex = y + hexagonHeight / 2;
     const adjustedY = bottomOfHex - treeHeight - hexagonHeight * 0.2;
 
+    const handleTreeClick = () => {
+        if (treeSize < 3) {
+            setTreeSize(treeSize + 1);
+        }
+        if (treeSize == 3) {
+            setTreeSize(0);
+        }
+    }
+
+    // Использование treeSize как части ключа заставит React пересоздать компонент TreeImage
+    // при каждом изменении размера, что позволит корректно обновить его размеры
     return (
-        <TreeImage
-            imageSrc={imageSrc}
-            x={x}
-            y={adjustedY}
-            height={treeHeight}
-        />
+        <Group>
+            <TreeImage
+                key={`${treeSize}-${imageSrc}`} // Обновляем ключ при изменении размера дерева
+                imageSrc={imageSrc}
+                x={x}
+                y={adjustedY}
+                height={treeHeight}
+                onClick={handleTreeClick}
+            />
+        </Group>
     );
 };
 
