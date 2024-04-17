@@ -19,7 +19,7 @@ const Board = ({ hexagonsData, centerX, centerY }) => {
     return (
         <Layer>
             {hexagonsData.map((hexData, index) => {
-                const { x, y } = hexToScreen(hexData.coord.x, hexData.coord.z);
+                const { x, y } = hexToScreen(hexData.CubeCoord.X, hexData.CubeCoord.Z);
                 const posX = centerX + x;
                 const posY = centerY + y;
 

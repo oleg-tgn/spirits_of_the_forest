@@ -1,0 +1,556 @@
+{
+    "SunDirection": 0,
+    "Round": 0,
+    "Nutrients": 20,
+    "IsFinished": false,
+    "CreationDate": "2024-04-17T19:53:44.9478526Z",
+    "ActivePlayerId": "00000000-0000-0000-0000-000000000000",
+    "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+    "Board": {
+        "RingNumber": 3,
+        "Cells": [
+            {
+                "Index": 0,
+                "Richness": 3,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 1,
+                    "Y": -1,
+                    "Z": 0
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "3e19fe12-fe10-4bac-a0f5-08dc5f00d45e"
+            },
+            {
+                "Index": 1,
+                "Richness": 3,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 1,
+                    "Y": 0,
+                    "Z": -1
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "756f1bf8-9eb5-4300-a0f6-08dc5f00d45e"
+            },
+            {
+                "Index": 2,
+                "Richness": 3,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 0,
+                    "Y": 1,
+                    "Z": -1
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "add41cdc-4ebe-4466-a0f7-08dc5f00d45e"
+            },
+            {
+                "Index": 3,
+                "Richness": 3,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -1,
+                    "Y": 1,
+                    "Z": 0
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "a5fe95da-8811-488a-a0f8-08dc5f00d45e"
+            },
+            {
+                "Index": 4,
+                "Richness": 3,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -1,
+                    "Y": 0,
+                    "Z": 1
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "e67427b0-a733-4d68-a0f9-08dc5f00d45e"
+            },
+            {
+                "Index": 5,
+                "Richness": 3,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 0,
+                    "Y": -1,
+                    "Z": 1
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "ba1283ef-609f-4b88-a0fa-08dc5f00d45e"
+            },
+            {
+                "Index": 6,
+                "Richness": 2,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 1,
+                    "Y": -1,
+                    "Z": 0
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "922f6a1b-e7c4-4a48-a0fb-08dc5f00d45e"
+            },
+            {
+                "Index": 7,
+                "Richness": 2,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 1,
+                    "Y": 0,
+                    "Z": -1
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "35040614-3236-4242-a0fc-08dc5f00d45e"
+            },
+            {
+                "Index": 8,
+                "Richness": 2,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 1,
+                    "Y": 1,
+                    "Z": -2
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "213a522f-160a-41b3-a0fd-08dc5f00d45e"
+            },
+            {
+                "Index": 9,
+                "Richness": 2,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 0,
+                    "Y": 2,
+                    "Z": -2
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "3a14d5e2-c57e-4e19-a0fe-08dc5f00d45e"
+            },
+            {
+                "Index": 10,
+                "Richness": 2,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -1,
+                    "Y": 3,
+                    "Z": -2
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "e2ae1462-5b5c-4fb0-a0ff-08dc5f00d45e"
+            },
+            {
+                "Index": 11,
+                "Richness": 2,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -2,
+                    "Y": 3,
+                    "Z": -1
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "9035f470-04c4-432b-a100-08dc5f00d45e"
+            },
+            {
+                "Index": 12,
+                "Richness": 2,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -3,
+                    "Y": 3,
+                    "Z": 0
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "7f2b252f-0c85-426b-a101-08dc5f00d45e"
+            },
+            {
+                "Index": 13,
+                "Richness": 2,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -3,
+                    "Y": 2,
+                    "Z": 1
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "7f445bd2-ccc0-4e66-a102-08dc5f00d45e"
+            },
+            {
+                "Index": 14,
+                "Richness": 2,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -3,
+                    "Y": 1,
+                    "Z": 2
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "93a750c0-9bcb-4d4c-a103-08dc5f00d45e"
+            },
+            {
+                "Index": 15,
+                "Richness": 2,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -2,
+                    "Y": 0,
+                    "Z": 2
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "99952dbc-dfdf-4014-a104-08dc5f00d45e"
+            },
+            {
+                "Index": 16,
+                "Richness": 2,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -1,
+                    "Y": -1,
+                    "Z": 2
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "9b6b04cf-dba7-4434-a105-08dc5f00d45e"
+            },
+            {
+                "Index": 17,
+                "Richness": 2,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 0,
+                    "Y": -1,
+                    "Z": 1
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "e8a3126c-3d15-44de-a106-08dc5f00d45e"
+            },
+            {
+                "Index": 18,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 1,
+                    "Y": -1,
+                    "Z": 0
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "0d025a8e-a8a5-45d7-a107-08dc5f00d45e"
+            },
+            {
+                "Index": 19,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 1,
+                    "Y": 0,
+                    "Z": -1
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "e6c63f83-78dd-492d-a108-08dc5f00d45e"
+            },
+            {
+                "Index": 20,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 1,
+                    "Y": 1,
+                    "Z": -2
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "282c78ac-f371-485b-a109-08dc5f00d45e"
+            },
+            {
+                "Index": 21,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 1,
+                    "Y": 2,
+                    "Z": -3
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "f8817731-5c12-49fa-a10a-08dc5f00d45e"
+            },
+            {
+                "Index": 22,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 0,
+                    "Y": 3,
+                    "Z": -3
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "c9da0149-3fd0-4446-a10b-08dc5f00d45e"
+            },
+            {
+                "Index": 23,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -1,
+                    "Y": 4,
+                    "Z": -3
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "3745fa6d-346e-4a35-a10c-08dc5f00d45e"
+            },
+            {
+                "Index": 24,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -2,
+                    "Y": 5,
+                    "Z": -3
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "c8a0c1ed-e8b4-4d1b-a10d-08dc5f00d45e"
+            },
+            {
+                "Index": 25,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -3,
+                    "Y": 5,
+                    "Z": -2
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "81339054-a912-4f70-a10e-08dc5f00d45e"
+            },
+            {
+                "Index": 26,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -4,
+                    "Y": 5,
+                    "Z": -1
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "3bb6eef7-57fd-4333-a10f-08dc5f00d45e"
+            },
+            {
+                "Index": 27,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -5,
+                    "Y": 5,
+                    "Z": 0
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "82de7dcd-1863-4538-a110-08dc5f00d45e"
+            },
+            {
+                "Index": 28,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -5,
+                    "Y": 4,
+                    "Z": 1
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "3b639660-ebbc-4817-a111-08dc5f00d45e"
+            },
+            {
+                "Index": 29,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -5,
+                    "Y": 3,
+                    "Z": 2
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "f385804d-6531-44eb-a112-08dc5f00d45e"
+            },
+            {
+                "Index": 30,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -5,
+                    "Y": 2,
+                    "Z": 3
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "9d7328f3-f85a-4df4-a113-08dc5f00d45e"
+            },
+            {
+                "Index": 31,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -4,
+                    "Y": 1,
+                    "Z": 3
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "7aa6a67c-6091-4c38-a114-08dc5f00d45e"
+            },
+            {
+                "Index": 32,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -3,
+                    "Y": 0,
+                    "Z": 3
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "6007923c-2de6-42db-a115-08dc5f00d45e"
+            },
+            {
+                "Index": 33,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -2,
+                    "Y": -1,
+                    "Z": 3
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "9a495952-9da9-4914-a116-08dc5f00d45e"
+            },
+            {
+                "Index": 34,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": -1,
+                    "Y": -1,
+                    "Z": 2
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "54cc3dd7-bc91-4785-a117-08dc5f00d45e"
+            },
+            {
+                "Index": 35,
+                "Richness": 1,
+                "IsShadowed": false,
+                "CubeCoord": {
+                    "X": 0,
+                    "Y": -1,
+                    "Z": 1
+                },
+                "BoardId": "d9a72d08-246f-4238-8901-08dc5f00d46a",
+                "PlantId": null,
+                "Plant": null,
+                "RelatedHexagons": null,
+                "Id": "17c90a05-9462-48a3-a118-08dc5f00d45e"
+            }
+        ],
+        "Id": "d9a72d08-246f-4238-8901-08dc5f00d46a"
+    },
+    "Id": "1929e8d6-d02c-4ffd-a0ef-17fb35c6834b"
+}
