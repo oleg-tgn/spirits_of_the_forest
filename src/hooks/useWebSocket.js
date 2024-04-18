@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-function WebSocketComponent({ onMessageReceived }) {
-    const [websocket, setWebsocket] = useState(null);
+
+function useWebSocket() {
+    const [gameState, setGameState] = useState({});
 
     useEffect(() => {
         const ws = new WebSocket('wss://spiritsoftheforest20240414143518.azurewebsites.net/ws?userId=admin');
@@ -11,7 +12,7 @@ function WebSocketComponent({ onMessageReceived }) {
         };
 
         ws.onmessage = (event) => {
-            onMessageReceived(event.data);  // Call the passed callback function with new data
+            setGameState(JSON.parse(event.data));
         };
 
         ws.onclose = () => {
@@ -22,14 +23,12 @@ function WebSocketComponent({ onMessageReceived }) {
             console.error('WebSocket error: ', error);
         };
 
-        setWebsocket(ws);
-
         return () => {
             ws.close();
         };
-    }, [onMessageReceived]);  // Include the callback in the dependency array
+    }, []); 
 
-    return null;  // This component does not render anything
+    return { gameState };
 }
 
-export default WebSocketComponent;
+export default useWebSocket;

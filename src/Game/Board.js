@@ -14,6 +14,8 @@ const hexToScreen = (q, r) => {
 };
 
 const Board = ({ hexagonsData, centerX, centerY }) => {
+    if (!hexagonsData) return;
+
     const hexagonSize = window.innerHeight / 16;
 
     return (
