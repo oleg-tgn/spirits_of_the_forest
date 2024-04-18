@@ -10,7 +10,9 @@ const Game = () => {
 
   const { gameState } = useWebSocket();
 
-  if (!gameState?.Board) return;
+  if (!gameState?.Board) return (
+    <p style={{textAlign: 'center'}}>Game loading...</p>
+  );
 
   const hexagonsData = gameState.Board.Cells;
   const hexagons = hexagonsData.map(hexData => ({
