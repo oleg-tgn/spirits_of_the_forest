@@ -11,7 +11,7 @@ const TreeImage = ({ imageSrc, x, y, height, onClick }) => {
     useEffect(() => {
         if (image) {
             const ratio = image.width / image.height;
-            setImgWidth(imgHeight * ratio);
+            setImgWidth(image.height * ratio);
         }
     }, [image]);
 
@@ -21,7 +21,7 @@ const TreeImage = ({ imageSrc, x, y, height, onClick }) => {
             x={x - imgWidth / 2}
             y={y}
             width={imgWidth}
-            height={imgHeight}
+            height={image.height}
             onClick={onClick} // Добавляем обработчик клика здесь
         />
     );
@@ -43,7 +43,7 @@ const Tree = ({ tree = { size: 0, player: null }, x, y, hexagonHeight }) => {
         if (treeSize < 3) {
             setTreeSize(treeSize + 1);
         }
-        if (treeSize === 3) {
+        if (treeSize == 3) {
             setTreeSize(0);
         }
     }
