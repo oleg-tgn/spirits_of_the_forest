@@ -43,7 +43,7 @@ const Tree = ({ tree = { size: 0, player: null }, x, y, hexagonHeight }) => {
         if (treeSize < 3) {
             setTreeSize(treeSize + 1);
         }
-        if (treeSize == 3) {
+        if (treeSize === 3) {
             setTreeSize(0);
         }
     }
