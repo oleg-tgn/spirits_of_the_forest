@@ -6,7 +6,6 @@ import tree2Image from '../images/tree2.png';
 
 const TreeImage = ({ imageSrc, x, y, height, onClick }) => {
     const [image] = useImage(imageSrc);
-    const [imgHeight, setImgHeight] = useState(height);
     const [imgWidth, setImgWidth] = useState(0);
 
     useEffect(() => {
@@ -14,7 +13,7 @@ const TreeImage = ({ imageSrc, x, y, height, onClick }) => {
             const ratio = image.width / image.height;
             setImgWidth(imgHeight * ratio);
         }
-    }, [image, imgHeight]);
+    }, [image]);
 
     return (
         <Image
@@ -44,7 +43,7 @@ const Tree = ({ tree = { size: 0, player: null }, x, y, hexagonHeight }) => {
         if (treeSize < 3) {
             setTreeSize(treeSize + 1);
         }
-        if (treeSize == 3) {
+        if (treeSize === 3) {
             setTreeSize(0);
         }
     }

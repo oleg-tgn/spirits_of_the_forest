@@ -12,7 +12,6 @@ const Menu = () => {
           <li><Link to="/profile">Profile</Link></li>
           <li><Link to="/settings">Settings</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/websocket">WebSocket</Link></li>
         </ul>
       </nav>
     </div>
