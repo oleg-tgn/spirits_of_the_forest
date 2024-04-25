@@ -6,6 +6,7 @@ import Game from './Game/Game.js';
 import Profile from './Profile/Profile.js'; 
 import Settings from './Settings/Settings.js'; 
 import About from './About/About.js';
+import './App.css';
 
 function App() {
   return (
@@ -22,3 +23,4 @@ function App() {
 }
 
 export default App;
+  
