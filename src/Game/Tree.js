@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Image, Group } from 'react-konva';
 import useImage from 'use-image';
-import tree1Image from '../images/tree1.png';
-import tree2Image from '../images/tree2.png';
+import tree1Image from './assets/images/tree1.png';
+import tree2Image from './assets/images/tree2.png';
 
 const TreeImage = ({ imageSrc, x, y, height, onClick }) => {
     const [image] = useImage(imageSrc);
