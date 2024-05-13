@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Pixeboy";
-  src: url("./fonts/pixeboy/Pixeboy.eot");
-  src: url("./fonts/pixeboy/Pixeboy.woff2") format("woff2"),
-      url("./fonts/pixeboy/Pixeboy.woff") format("woff"),
-      url("./fonts/pixeboy/Pixeboy.ttf") format("truetype"),
-      url("./fonts/pixeboy/Pixeboy.svg#filename") format("svg");
+  src: url("./assets/fonts/pixeboy/Pixeboy.eot");
+  src: url("./assets/fonts/pixeboy/Pixeboy.woff2") format("woff2"),
+      url("./assets/fonts/pixeboy/Pixeboy.woff") format("woff"),
+      url("./assets/fonts/pixeboy/Pixeboy.ttf") format("truetype"),
+      url("./assets/fonts/pixeboy/Pixeboy.svg#filename") format("svg");
 }
 
 * {
