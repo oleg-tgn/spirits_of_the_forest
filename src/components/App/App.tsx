@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import Menu from './Pages/Menu/Menu';
-import Game from './Game/Game';
-import Profile from './Pages/Profile/Profile'; 
-import Settings from './Pages/Settings/Settings'; 
-import About from './Pages/About/About';
+import { Menu } from 'pages/Menu';
+import { Game } from 'pages/Game';
+import { Profile } from 'pages/Profile';
+import { Settings } from 'pages/Settings';
+import { About } from 'pages/About';
 import './App.css';
 
 function App() {
@@ -18,5 +18,4 @@ function App() {
   );
 }
 
-export default App;
-  
+export { App };

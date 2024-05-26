@@ -1,6 +1,6 @@
 import { Stage } from 'react-konva';
-import Board from './Board';
-import useWebSocket from './hooks/useWebSocket';
+import { Board } from 'components/Board';
+import { useWebSocket } from 'hooks/useWebSocket';
 
 const Game = () => {
   const centerX = window.innerWidth / 2;
@@ -14,9 +14,9 @@ const Game = () => {
 
   return (
     <Stage width={window.innerWidth} height={window.innerHeight}>
-      <Board hexagonsData={gameState.Board.Cells} centerX={centerX} centerY={centerY} gameState={gameState}/> 
+      <Board hexagonsData={gameState.Board.Cells} centerX={centerX} centerY={centerY} gameState={gameState}/>
     </Stage>
   );
 };
 
-export default Game;
+export { Game };

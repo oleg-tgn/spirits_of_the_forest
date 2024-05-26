@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import type { Game } from '../../types/Game';
+import type { Game } from 'types/Game';
 
 function useWebSocket() {
     const [gameState, setGameState] = useState<Game | null>(null);
@@ -26,9 +26,9 @@ function useWebSocket() {
         return () => {
             ws.close();
         };
-    }, []); 
+    }, []);
 
     return { gameState };
 }
 
-export default useWebSocket;
+export { useWebSocket };
