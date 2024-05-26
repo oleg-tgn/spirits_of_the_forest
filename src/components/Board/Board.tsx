@@ -16,6 +16,11 @@ const hexToScreen = (q: number, r: number) => {
   return { x, y };
 };
 
+enum PlayerColor {
+  ORANGE = 1,
+  GREEN = 2,
+};
+
 type Props = {
   hexagonsData: Cell[];
   centerX: number;
@@ -28,13 +33,24 @@ const Board = ({ hexagonsData, centerX, centerY, gameState }: Props) => {
 
   const hexagonSize = window.innerHeight / 16;
 
+  const handleTreeClick = (id: string) => {
+    console.log(id);
+  }
+
+  const getTreeColor = (gameState: Game, hexData: Cell) => {
+    return gameState.Players[0].Id === hexData.Plant?.OwnedBy ? PlayerColor.GREEN : PlayerColor.ORANGE;
+  }
+
   return (
     <Layer>
       {hexagonsData.map((hexData, index) => {
         const { x, y } = hexToScreen(hexData.CubeCoord.X, hexData.CubeCoord.Z);
         const posX = centerX + x;
         const posY = centerY + y;
-
+        let treeSize = 0;
+        if (hexData.Plant) {
+          treeSize = hexagonHeight * 0.33 * hexData.Plant?.PlantLevel;
+        }
         return (
           <React.Fragment key={index}>
             <RegularPolygon
@@ -48,13 +64,15 @@ const Board = ({ hexagonsData, centerX, centerY, gameState }: Props) => {
             />
             {hexData.Plant &&
               <Tree
-                tree={hexData.Plant}
-                x={posX}
-                y={posY}
-                hexagonHeight={hexagonHeight}
-                players={gameState.Players}
+                id={hexData.Plant.Id}
+                color={getTreeColor(gameState, hexData)}
+                x={posX - treeSize / 2}
+                y={posY - treeSize / 2}
+                size={treeSize}
+                onClick={handleTreeClick}
               />
             }
+
           </React.Fragment>
         );
       })}
