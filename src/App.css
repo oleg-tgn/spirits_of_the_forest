@@ -13,3 +13,7 @@
   box-sizing: border-box;
   font-family: "Pixeboy";
 }
+
+.container {
+  margin: 0 10% 0 10%;
+}

@@ -6,13 +6,11 @@ import './Menu.css';
 const Menu = () => {
   return (
     <div className='page'>
-      <nav>
-        <ul>
-          <li><Link to="/game">Start Game</Link></li>
-          <li><Link to="/profile">Profile</Link></li>
-          <li><Link to="/settings">Settings</Link></li>
-          <li><Link to="/about">About</Link></li>
-        </ul>
+      <nav className='navigation container'>
+        <Link className='btn' to="/game">Start Game</Link>
+        <Link className='btn' to="/profile">Profile</Link>
+        <Link className='btn' to="/settings">Settings</Link>
+        <Link className='btn' to="/about">About</Link>
       </nav>
     </div>
   );
