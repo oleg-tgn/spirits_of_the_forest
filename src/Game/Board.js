@@ -13,7 +13,7 @@ const hexToScreen = (q, r) => {
   return { x, y };
 };
 
-const Board = ({ hexagonsData, centerX, centerY }) => {
+const Board = ({ hexagonsData, centerX, centerY, gameState }) => {
     if (!hexagonsData) return;
 
     const hexagonSize = window.innerHeight / 16;
@@ -36,12 +36,15 @@ const Board = ({ hexagonsData, centerX, centerY }) => {
                             stroke="black"
                             strokeWidth={4}
                         />
-                        <Tree
-                            tree={hexData.tree}
-                            x={posX}
-                            y={posY}
-                            hexagonHeight={hexagonHeight}
-                        />
+                        {hexData.Plant &&
+                            <Tree
+                                tree={hexData.Plant}
+                                x={posX}
+                                y={posY}
+                                hexagonHeight={hexagonHeight}
+                                players={gameState.Players}
+                            />                            
+                        }
                     </React.Fragment>
                 );
             })}

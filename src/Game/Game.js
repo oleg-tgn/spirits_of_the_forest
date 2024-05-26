@@ -22,7 +22,7 @@ const Game = () => {
 
   return (
     <Stage width={window.innerWidth} height={window.innerHeight}>
-      <Board hexagonsData={hexagons} centerX={centerX} centerY={centerY} /> 
+      <Board hexagonsData={hexagons} centerX={centerX} centerY={centerY} gameState={gameState}/> 
     </Stage>
   );
 };
