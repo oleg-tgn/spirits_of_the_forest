@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-
+import type { Game } from '../../types/Game';
 
 function useWebSocket() {
-    const [gameState, setGameState] = useState({});
+    const [gameState, setGameState] = useState<Game | null>(null);
 
     useEffect(() => {
         const ws = new WebSocket('wss://spiritsoftheforest20240414143518.azurewebsites.net/ws?userId=admin');

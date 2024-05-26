@@ -1,11 +1,20 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Image, Group } from 'react-konva';
-//import TreeImage from './TreeImage';
 import tree1Image from './assets/images/tree1.png';
 import tree2Image from './assets/images/tree2.png';
 import useImage from 'use-image';
+import type { Plant } from '../types/Plant';
+import { Player } from '../types/Player';
 
-const Tree = ({ tree = {PlantLevel: -1}, x, y, hexagonHeight, players }) => {
+type Props = {
+    tree: Plant;
+    x: number;
+    y: number;
+    hexagonHeight: number;
+    players: Player[]
+}
+
+const Tree = ({ tree, x, y, hexagonHeight, players }: Props) => {
     const [plantLevel, setPlantLevel] = useState(tree.PlantLevel);
     const treeHeight = useMemo(() => hexagonHeight * 0.25 * plantLevel, [hexagonHeight, plantLevel]);
     
@@ -49,18 +58,9 @@ const Tree = ({ tree = {PlantLevel: -1}, x, y, hexagonHeight, players }) => {
                 x={x - imgWidth / 2}
                 y={adjustedY}
                 width={imgWidth}
-                height={image.height}
+                height={image?.height}
                 onClick={handleTreeClick} // Добавляем обработчик клика здесь
-            />
-
-            {/* <TreeImage
-                key={`${plantLevel}-${imageSrc}`} // Обновляем ключ при изменении размера дерева
-                imageSrc={imageSrc}
-                x={x}
-                y={adjustedY}
-                height={treeHeight}
-                onClick={handleTreeClick}
-            /> */}
+            />           
         </Group>
     );
 };

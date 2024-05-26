@@ -1,11 +1,9 @@
-// App.js
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Menu from './Pages/Menu/Menu.js';
-import Game from './Game/Game.js';
-import Profile from './Pages/Profile/Profile.js'; 
-import Settings from './Pages/Settings/Settings.js'; 
-import About from './Pages/About/About.js';
+import Menu from './Pages/Menu/Menu';
+import Game from './Game/Game';
+import Profile from './Pages/Profile/Profile'; 
+import Settings from './Pages/Settings/Settings'; 
+import About from './Pages/About/About';
 import './App.css';
 
 function App() {
