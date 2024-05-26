@@ -2,7 +2,7 @@ import React from 'react';
 import { Stage } from 'react-konva';
 import Board from './Board';
 import { richnessColor } from './constants';
-import useWebSocket from '../hooks/useWebSocket';
+import useWebSocket from './hooks/useWebSocket';
 
 const Game = () => {
   const centerX = window.innerWidth / 2;
