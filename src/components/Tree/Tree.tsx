@@ -1,4 +1,3 @@
-import { useState, useEffect, useMemo } from 'react';
 import { Image, Group } from 'react-konva';
 import color1 from './assets/images/tree1.png';
 import color2 from './assets/images/tree2.png';
