@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import './Menu.css';
+import './Home.css';
 
-const Menu = () => {
+const Home = () => {
   return (
     <div className='page'>
       <nav className='navigation container'>
@@ -14,4 +14,4 @@ const Menu = () => {
   );
 };
 
-export { Menu };
+export { Home };
