@@ -1,5 +1,5 @@
 export const richnessColor: { [key: number]: string } = {
-    1: "rgb(190, 180, 170)",
-    2: "rgb(140, 116, 69)",
-    3: "rgb(70, 45, 25)"
+  1: "rgb(231, 220, 209)",
+  2: "rgb(176, 150, 98)",
+  3: "rgb(99, 71, 50)"
 };
