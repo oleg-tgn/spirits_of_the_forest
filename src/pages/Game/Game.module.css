@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.gameRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.boardContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

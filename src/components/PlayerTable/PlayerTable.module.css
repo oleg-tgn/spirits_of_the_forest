@@ -1,0 +1,24 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 1000px;
+  gap: 20px 10px;
+  font-size: 20px;
+  margin: 25px auto;
+}
+
+.state {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  padding: 0 45px;
+}
+
+.key {
+  margin-right: 5px;
+}
+
+.value {
+  color: green;
+}
