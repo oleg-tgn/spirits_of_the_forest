@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1000px;
+  gap: 10px 20px;
+  font-size: 20px;
+  margin: 25px auto;
+}
+
+.state {
+  display: flex;
+  flex-direction: row;
+}
+
+.key {
+  margin-right: 5px;
+}
+
+.value {
+  color: green;
+}
