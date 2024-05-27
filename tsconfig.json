@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "components/*":["src/components/*"],
-      "constants/*":["src/constants/*"],
-      "hooks/*":["src/hooks/*"],
-      "pages/*":["src/pages/*"],
-      "types/*":["src/types/*"],
+      "components/*":["./src/components/*"],
+      "constants/*":["./src/constants/*"],
+      "hooks/*":["./src/hooks/*"],
+      "qwe/*":["./src/qwe/*"],
+      "types/*":["./src/types/*"],
     },
     "target": "ES2020",
     "useDefineForClassFields": true,
