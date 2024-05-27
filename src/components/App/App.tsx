@@ -6,6 +6,8 @@ import { Routes } from 'react-router-dom';
 // import { Settings } from 'pages/Settings';
 // import { About } from 'pages/About';
 
+import { Test } from 'components/Test';
+
 import './App.css';
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/settings" element={<Settings />} />
       <Route path="/about" element={<About />} /> */}
+      <Test />
     </Routes>
   );
 }
