@@ -10,7 +10,7 @@ export default defineConfig({
       components: path.resolve(__dirname, './src/components'),
       constants: path.resolve(__dirname, './src/constants'),
       hooks: path.resolve(__dirname, './src/hooks'),
-      qwe: path.resolve(__dirname, './src/qwe'),
+      '@pages': path.resolve(__dirname, './src/pages'),
       types: path.resolve(__dirname, './src/types'),
     }
   }

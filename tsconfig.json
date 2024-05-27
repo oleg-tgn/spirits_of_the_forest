@@ -5,7 +5,7 @@
       "components/*":["./src/components/*"],
       "constants/*":["./src/constants/*"],
       "hooks/*":["./src/hooks/*"],
-      "qwe/*":["./src/qwe/*"],
+      "@pages/*":["./src/pages/*"],
       "types/*":["./src/types/*"],
     },
     "target": "ES2020",
