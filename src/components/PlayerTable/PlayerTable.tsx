@@ -3,13 +3,17 @@ import styles from './PlayerTable.module.css';
 
 type Props = {
   player: Player;
+  isActive: boolean;
 }
 
-const PlayerTable = ({ player }: Props) => {
+const PlayerTable = ({ player, isActive }: Props) => {
   return (
     <div className={styles.root}>
       <div className={styles.state}>
-        <div className={styles.key}>Player:</div> <div className={styles.value}>{player.Number + 1}</div>
+        <div className={styles.key}>Player:</div> <div className={styles.value}>
+          {player.Number + 1}
+          {isActive && <span>&nbsp;(Active)</span>}
+        </div>
       </div>
       <div className={styles.state}>
         <div className={styles.key}>Waiting:</div> <div className={styles.value}>{player.IsWaiting ? 'YES' : 'NO'}</div>

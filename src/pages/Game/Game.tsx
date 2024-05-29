@@ -28,10 +28,14 @@ const Game = () => {
       />
       <div className={styles.gameRow}>
         <PlayerTable
-          player={gameState.Players[0]} />
+          player={gameState.Players[0]}
+          isActive={gameState.ActivePlayerId === gameState.Players[0].Id}
+        />
 
         <div className={styles.boardContainer}>
-          <Stage width={window.innerWidth - 400} height={window.innerHeight - 100}>
+          <Stage
+            width={window.innerWidth - 400}
+            height={window.innerHeight - 100}>
             <Board
               hexagonsData={gameState.Board.Cells}
               centerX={centerX}
@@ -42,7 +46,9 @@ const Game = () => {
         </div>
 
         <PlayerTable
-          player={gameState.Players[1]} />
+          player={gameState.Players[1]}
+          isActive={gameState.ActivePlayerId === gameState.Players[1].Id}
+        />
       </div>
     </div>
   );
