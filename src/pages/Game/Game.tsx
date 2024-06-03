@@ -7,17 +7,26 @@ import { useWebSocket } from 'hooks/useWebSocket';
 
 import styles from './Game.module.css'
 
+import { ActionType } from 'types/ActionType';
+
 const Game = () => {
   const centerX = (window.innerWidth - 400) / 2;
   const centerY = window.innerHeight / 2 - 50;
 
-  const { gameState } = useWebSocket();
+  const { gameState, sendMessage } = useWebSocket();
 
   if (!gameState) return (
     <p style={{textAlign: 'center'}}>Game loading...</p>
   );
 
-  console.log(gameState);
+  const handleWaitClick = () => {
+    sendMessage({
+      "SourceCellIdx": 0,
+      "TargetCellIdx": 0,
+      "Type": ActionType.WAIT,
+      "GameId": gameState.Id,
+    });
+  }
 
   return (
     <div className={styles.root}>
@@ -31,7 +40,7 @@ const Game = () => {
           player={gameState.Players[0]}
           isActive={gameState.ActivePlayerId === gameState.Players[0].Id}
         />
-
+        <button onClick={handleWaitClick}>Wait</button>
         <div className={styles.boardContainer}>
           <Stage
             width={window.innerWidth - 400}
