@@ -6,9 +6,11 @@ type Props = {
   sunDirection: number;
 }
 
-const GameTable = (props: Props) => {
-  const { nutrients, round, sunDirection } = props;
-
+export const GameTable = ({
+  nutrients,
+  round,
+  sunDirection,
+}: Props) => {
   return (
     <div className={styles.root}>
       <div className={styles.state}>
@@ -23,5 +25,3 @@ const GameTable = (props: Props) => {
     </div>
   )
 };
-
-export { GameTable };

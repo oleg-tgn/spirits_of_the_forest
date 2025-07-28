@@ -21,10 +21,19 @@ const Game = () => {
 
   const handleWaitClick = () => {
     sendMessage({
-      "SourceCellIdx": 0,
-      "TargetCellIdx": 0,
-      "Type": ActionType.WAIT,
-      "GameId": gameState.Id,
+      SourceCellIdx: 0,
+      TargetCellIdx: 0,
+      Type: ActionType.WAIT,
+      GameId: gameState.Id,
+    });
+  }
+
+  const handleTreeClick = (id: number) => {
+    sendMessage({
+      SourceCellIdx: id,
+      TargetCellIdx: id,
+      Type: ActionType.GROW,
+      GameId: gameState.Id,
     });
   }
 
@@ -50,6 +59,7 @@ const Game = () => {
               centerX={centerX}
               centerY={centerY}
               gameState={gameState}
+              onTreeClick={handleTreeClick}
             />
           </Stage>
         </div>

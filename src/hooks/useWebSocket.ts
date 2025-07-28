@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Action } from 'types/Action';
 import type { Game } from 'types/Game';
 
 function useWebSocket() {
@@ -32,7 +33,7 @@ function useWebSocket() {
     };
   }, []);
 
-  const sendMessage = (message: { SourceCellIdx: number, TargetCellIdx: number, Type: number, GameId: string }) => {
+  const sendMessage = (message: Action) => {
     if (ws && ws.readyState === WebSocket.OPEN) {
       ws.send(JSON.stringify(message));
     } else {

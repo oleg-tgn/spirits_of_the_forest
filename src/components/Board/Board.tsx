@@ -26,20 +26,22 @@ type Props = {
   centerX: number;
   centerY: number;
   gameState: Game;
+  onTreeClick: (index: number) => void;
 }
 
-const Board = ({ hexagonsData, centerX, centerY, gameState }: Props) => {
+const Board = ({ hexagonsData, centerX, centerY, gameState, onTreeClick }: Props) => {
   if (!hexagonsData) return;
 
   const hexagonSize = window.innerHeight / 16;
 
-  const handleTreeClick = (id: string) => {
-    console.log(id);
-  }
-
   const getTreeColor = (gameState: Game, hexData: Cell) => {
     return gameState.Players[0].Id === hexData.Plant?.OwnedBy ? PlayerColor.GREEN : PlayerColor.ORANGE;
   }
+
+  const handleHexClick = (id: number, PlantId?: string) => {
+    if (!PlantId) return;
+    onTreeClick(id);
+  };
 
   return (
     <Layer>
@@ -61,15 +63,14 @@ const Board = ({ hexagonsData, centerX, centerY, gameState }: Props) => {
               fill={richnessColor[hexData.Richness]}
               stroke="black"
               strokeWidth={4}
+              onClick={() => handleHexClick(hexData.Index, hexData.Plant?.Id)}
             />
             {hexData.Plant &&
               <Tree
-                id={hexData.Plant.Id}
                 color={getTreeColor(gameState, hexData)}
                 x={posX - treeSize / 2}
                 y={posY - treeSize / 2}
                 size={treeSize}
-                onClick={handleTreeClick}
               />
             }
 

@@ -6,7 +6,7 @@ type Props = {
   isActive: boolean;
 }
 
-const PlayerTable = ({ player, isActive }: Props) => {
+export const PlayerTable = ({ player, isActive }: Props) => {
   return (
     <div className={styles.root}>
       <div className={styles.state}>
@@ -30,5 +30,3 @@ const PlayerTable = ({ player, isActive }: Props) => {
     </div>
   )
 };
-
-export { PlayerTable };

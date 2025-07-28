@@ -4,15 +4,13 @@ import color2 from './assets/images/tree2.png';
 import useImage from 'use-image';
 
 type Props = {
-  id: string;
   color: 1 | 2;
   x: number;
   y: number;
   size: number;
-  onClick?: (id: string) => void;
 }
 
-const Tree = ({ id, color, x, y, size, onClick = () => {}}: Props) => {
+const Tree = ({ color, x, y, size}: Props) => {
   const imagesColor = [color1, color2];
   const [image] = useImage(imagesColor[color - 1]);
   // Использование plantLevel как части ключа заставит React пересоздать компонент TreeImage
@@ -25,7 +23,6 @@ const Tree = ({ id, color, x, y, size, onClick = () => {}}: Props) => {
         y={y}
         width={size}
         height={size}
-        onClick={() => onClick(id)}
         zIndex={1000}
       />
     </Group>
